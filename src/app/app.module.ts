@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +17,8 @@ import { MatListModule } from '@angular/material/list'
 import {MenuModule} from 'primeng/menu';
 import { HomeComponent } from './components/views/home/home.component';
 import {MatCardModule} from '@angular/material/card';
+import { CategoryReadComponent } from './components/views/categories/category-read/category-read.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -25,7 +28,8 @@ import {MatCardModule} from '@angular/material/card';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    CategoryReadComponent
   ],
   imports: [
     BrowserModule,
@@ -33,13 +37,15 @@ import {MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     MenubarModule,
     MenuModule,
+    HttpClientModule,
     // Modulos do Angular material
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
