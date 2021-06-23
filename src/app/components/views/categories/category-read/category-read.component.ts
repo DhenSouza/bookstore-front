@@ -3,6 +3,7 @@ import { CategoryService } from 'src/app/shared/services/category.service';
 import { first } from 'rxjs/operators';
 import { Category } from 'src/app/shared/models/Category';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-category-read',
@@ -16,7 +17,8 @@ export class CategoryReadComponent implements OnInit {
   displayedColumns: string[] = ['id', 'nome', 'descricao', 'livros', 'acoes'];
   
   constructor(
-    private service: CategoryService
+    private service: CategoryService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -29,6 +31,10 @@ export class CategoryReadComponent implements OnInit {
       console.log(resp)
       this.categories = resp;
     })
+  }
+
+  navCategoryCreate() {
+    this.router.navigate(["categories/create"])
   }
 
 }

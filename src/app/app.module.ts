@@ -19,6 +19,7 @@ import { HomeComponent } from './components/views/home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import { CategoryReadComponent } from './components/views/categories/category-read/category-read.component';
 import {MatTableModule} from '@angular/material/table';
+import { CategoryCreateComponent } from './components/views/categories/category-create/category-create.component';
 
 
 
@@ -29,7 +30,8 @@ import {MatTableModule} from '@angular/material/table';
     FooterComponent,
     NavComponent,
     HomeComponent,
-    CategoryReadComponent
+    CategoryReadComponent,
+    CategoryCreateComponent
   ],
   imports: [
     BrowserModule,
