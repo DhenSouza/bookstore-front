@@ -46,7 +46,7 @@ export class CategoryDeleteComponent implements OnInit {
       }, 2000);
     
         }, error => {
-          this.messageService.add({key: 'trd', severity:'error', summary: '!=Deletado', detail: 'Não pode ser deletado!'});
+          this.messageService.add({key: 'trd', severity:'error', summary: '!=Deletado', detail: 'Não pode ser deletado, tem livros associado!'});
         
     });
   }
