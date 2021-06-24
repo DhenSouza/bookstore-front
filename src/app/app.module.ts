@@ -25,6 +25,7 @@ import {MatInputModule} from '@angular/material/input';
 
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { CategoryDeleteComponent } from './components/views/categories/category-delete/category-delete.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MessageService } from 'primeng/api';
     NavComponent,
     HomeComponent,
     CategoryReadComponent,
-    CategoryCreateComponent
+    CategoryCreateComponent,
+    CategoryDeleteComponent
   ],
   imports: [
     BrowserModule,

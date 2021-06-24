@@ -29,4 +29,14 @@ export class CategoryService {
       return this.http.post<Category>(url, category);
     }
 
+    findById(id: String): Observable<Category> {
+      const url = this.baseUrl + `/categories/${id}`
+      return this.http.get<Category>(url)
+    }
+
+    delete(id: String): Observable<void> {
+      const url = this.baseUrl + `/categories/${id}`
+      return this.http.delete<void>(url);
+    }
+
 }
