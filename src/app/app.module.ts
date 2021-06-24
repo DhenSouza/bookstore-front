@@ -20,8 +20,8 @@ import {MatCardModule} from '@angular/material/card';
 import { CategoryReadComponent } from './components/views/categories/category-read/category-read.component';
 import {MatTableModule} from '@angular/material/table';
 import { CategoryCreateComponent } from './components/views/categories/category-create/category-create.component';
-
-
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,9 @@ import { CategoryCreateComponent } from './components/views/categories/category-
     MenubarModule,
     MenuModule,
     HttpClientModule,
+    FormsModule,
     // Modulos do Angular material
+    MatInputModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
