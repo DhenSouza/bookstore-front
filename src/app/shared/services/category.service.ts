@@ -14,14 +14,19 @@ export class CategoryService {
   constructor(
     private http: HttpClient
   ) {}
-
-  token = {
-    headers: new HttpHeaders().set('Authorization', environment.token)
-  }
+    // AINDA IREI IMPLEMENTAR O TOKEN 
+  // token = {
+  //   headers: new HttpHeaders().set('Authorization', environment.token)
+  // }
 
     findAll(): Observable<Category[]> {
       const url = this.baseUrl + '/categories'
-      return this.http.get<Category[]>(url,  this.token);
+      return this.http.get<Category[]>(url);
+    }
+
+    create(category: Category): Observable<Category> {
+      const url = this.baseUrl + '/categories'
+      return this.http.post<Category>(url, category);
     }
 
 }

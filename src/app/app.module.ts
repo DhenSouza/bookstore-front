@@ -23,6 +23,9 @@ import { CategoryCreateComponent } from './components/views/categories/category-
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 
+import {ToastModule} from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +44,7 @@ import {MatInputModule} from '@angular/material/input';
     MenuModule,
     HttpClientModule,
     FormsModule,
+    ToastModule,
     // Modulos do Angular material
     MatInputModule,
     MatToolbarModule,
@@ -51,7 +55,9 @@ import {MatInputModule} from '@angular/material/input';
     MatCardModule,
     MatTableModule
   ],
-  providers: [],
+  providers: [
+    MessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -28,7 +28,6 @@ export class CategoryReadComponent implements OnInit {
 
   findAll() {
     this.service.findAll().pipe(first()).subscribe(resp => {
-      console.log(resp)
       this.categories = resp;
     })
   }
